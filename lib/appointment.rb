@@ -6,6 +6,9 @@ class Appointment
     @date = date
     @patient = patient
     @doctor = doctor
+    @patient.appointments << self
+    @doctor.appointments << self
+
     @@all << self
   end
 
